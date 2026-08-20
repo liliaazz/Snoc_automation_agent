@@ -354,27 +354,6 @@ The repository contains:
 
 ---
 
-# 🧪 Offline Replay
-
-You can test the workflow locally without connecting to real email infrastructure.
-
-```bash
-python -m snoc_agent.cli.main replay-email \
-  tests/fixtures/emails/scenario_a_complete_unblock/01_complete_unblock.eml
-```
-
-Or replay a complete scenario:
-
-```bash
-python -m snoc_agent.cli.main replay-directory \
-  tests/fixtures/emails/scenario_c_multi_operation/
-```
-
-Replay mode uses deterministic/demo infrastructure and is forced into dry-run behavior.
-
-This makes the project reproducible for development and debugging.
-
----
 
 # 🐳 Quick Start with Docker
 
@@ -599,7 +578,6 @@ This project demonstrates practical experience with:
 * independent verification
 * safety policies
 * input validation
-* quarantine
 * human escalation
 * bounded model context
 * controlled side effects
@@ -614,23 +592,6 @@ This project demonstrates practical experience with:
 
 ---
 
-# ⚠️ Current Limitations
-
-This is a production-style engineering project, but several components remain intentionally limited:
-
-* LDAP/Active Directory is currently an adapter seam.
-* Attachment binaries are hashed/described but not analyzed.
-* The automated default suite mocks IMAP/SMTP.
-* The business API remains mocked in the Docker mailbox journey.
-* Qwen confidence values are not calibrated probabilities by default.
-* PostgreSQL is the deployment target while automated tests primarily use SQLite.
-* Automatic clarification defaults to one round before escalation.
-* Corrections to completed operations require human review.
-* Some historical datasets lack stateful/RFC ground truth.
-
-See the documentation for details.
-
----
 
 # 🔐 Security Notice
 
@@ -661,32 +622,3 @@ private datasets
 production logs
 ```
 
----
-
-# 📚 Documentation
-
-For deeper technical information:
-
-* [Team Handoff](TEAM_HANDOFF.md)
-* [LangGraph Migration Status](docs/langgraph_migration_status.md)
-* [LangChain/LangGraph Migration Plan](docs/langchain_five_agent_migration_plan.md)
-* [vLLM Inference Guide](docs/vllm_inference.md)
-* [Weakness & Safety Policy](docs/weakness_policy_decisions.md)
-* [Run & Test Guide](RUN_AND_TEST.md)
-
----
-
-
-# ⭐ Why this repository exists
-
-SNOC AI Agent was built to explore a practical question:
-
-> **How can we make AI agents useful for real business operations without allowing the model itself to become the authority?**
-
-The project focuses on the engineering around the model:
-
-**reasoning → verification → policy → execution → auditability**
-
-rather than treating an LLM as a black-box automation engine.
-
-If you're interested in **AI agents, LangGraph, LLM safety, telecom automation, or production-oriented AI systems**, feel free to explore the repository.
