@@ -1,0 +1,41 @@
+{
+  "message_kind": "ambiguous",
+  "referenced_existing_operation_ids": [],
+  "operations": [
+    {
+      "local_operation_id": "e-unknown-target-3",
+      "action": "unknown",
+      "pdv_code": null,
+      "phone": "0770000020",
+      "additional_fields": {},
+      "missing_fields": [
+        "target_operation",
+        "pdv_code"
+      ],
+      "evidence": [
+        {
+          "field_name": "phone",
+          "value": "0770000020",
+          "source": "latest_user_message",
+          "evidence_text": "Voici le numéro demandé : 0770000020.",
+          "support": "supported"
+        }
+      ],
+      "ambiguity_reasons": [
+        "Deux opérations non résolues de la conversation attendent un téléphone.",
+        "Aucun en-tête de réponse ni marqueur public ne cible une opération."
+      ],
+      "raw_action_confidence": 0.1,
+      "raw_field_confidence": {
+        "phone": 0.99,
+        "pdv_code": null
+      }
+    }
+  ],
+  "new_request_present": false,
+  "contradiction_with_stored_state": false,
+  "contradiction_details": [],
+  "unresolved_ambiguities": [
+    "Impossible d'attribuer 0770000020 à l'opération OTP ou à l'opération VPN."
+  ]
+}

@@ -1,0 +1,17 @@
+From: Animateur Zone Eta <animateur.eta@example.invalid>
+To: Agent SNOC <snoc-agent@example.invalid>
+Date: Tue, 07 Jul 2026 08:25:00 +0100
+Message-ID: <g-complete-and-new-002@fixtures.snoc.invalid>
+In-Reply-To: {{initial.clarification_message_id}}
+References: <g-incomplete-otp-001@fixtures.snoc.invalid> {{initial.clarification_message_id}}
+Subject: Re: [{{initial.request_reference}}] Information OTP manquante
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Pour le PDV 72000001, le nouveau numéro OTP est 0770000030.
+
+Par ailleurs, j'introduis une nouvelle demande : merci de débloquer le compte
+du PDV 72000002.
+
+Bien cordialement

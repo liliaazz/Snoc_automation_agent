@@ -1,0 +1,16 @@
+{
+  "action_supported": "yes",
+  "pdv_supported": "yes",
+  "phone_supported": "not_required",
+  "stored_state_compatible": "yes",
+  "contradiction_present": false,
+  "contradiction_type": null,
+  "missing_fields": [],
+  "correction_detected": false,
+  "new_request_detected": true,
+  "evidence_summary": [
+    "Le message courant demande explicitement le déblocage du compte.",
+    "Le PDV 12000001 est présent dans le message courant."
+  ],
+  "raw_confidence": 0.99
+}

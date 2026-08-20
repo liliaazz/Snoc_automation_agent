@@ -1,0 +1,23 @@
+From: Superviseur Zone Delta <superviseur.delta@example.invalid>
+To: Agent SNOC <snoc-agent@example.invalid>
+Date: Sat, 04 Jul 2026 11:00:00 +0100
+Message-ID: <d-reused-reset-002@fixtures.snoc.invalid>
+In-Reply-To: <completion-d-001@snoc-agent.invalid>
+References: <d-original-vpn-001@fixtures.snoc.invalid> <completion-d-001@snoc-agent.invalid>
+Subject: Re: [SNOC-REQ-D00000000001] Creation acces VPN PDV 42000001
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Bonjour,
+
+Nouvelle demande indépendante : merci de réinitialiser le mot de passe du
+PDV 42000002. Ne reprenez pas l'ancien code ni l'ancien téléphone cités plus bas.
+
+-----Message d'origine-----
+De : Agent SNOC <snoc-agent@example.invalid>
+Envoyé : samedi 4 juillet 2026 09:00
+Objet : Demande terminée
+
+L'accès VPN du PDV 42000001 avec le contact 0770000010 a été créé.
+[[SNOC_REQUEST_CLOSED:SNOC-REQ-D00000000001]]

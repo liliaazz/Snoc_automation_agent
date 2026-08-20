@@ -1,0 +1,32 @@
+{
+  "message_kind": "new_request",
+  "referenced_existing_operation_ids": [],
+  "operations": [
+    {
+      "local_operation_id": "d-reset-new-2",
+      "action": "password_reset",
+      "pdv_code": "42000002",
+      "phone": null,
+      "additional_fields": {},
+      "missing_fields": [],
+      "evidence": [
+        {
+          "field_name": "pdv_code",
+          "value": "42000002",
+          "source": "latest_user_message",
+          "evidence_text": "réinitialiser le mot de passe du PDV 42000002",
+          "support": "supported"
+        }
+      ],
+      "ambiguity_reasons": [],
+      "raw_action_confidence": 0.99,
+      "raw_field_confidence": {
+        "pdv_code": 0.99
+      }
+    }
+  ],
+  "new_request_present": true,
+  "contradiction_with_stored_state": false,
+  "contradiction_details": [],
+  "unresolved_ambiguities": []
+}

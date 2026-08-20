@@ -1,0 +1,7 @@
+{
+  "name": "scenario_g_mixed_reply",
+  "steps": [
+    {"file": "01_incomplete_otp.eml", "alias": "initial"},
+    {"file": "02_completion_and_new_request.eml", "alias": "mixed_reply"}
+  ]
+}

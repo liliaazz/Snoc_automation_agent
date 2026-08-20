@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #111317;
+  background: #f3f3f3;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --orange: #ea8b00;
+  --blue: #2563eb;
+  --green: #4caf50;
+  --red: #f44336;
+}
+
+* { box-sizing: border-box; }
+html { min-width: 320px; background: #f3f3f3; }
+body { margin: 0; min-width: 320px; min-height: 100vh; overflow-x: hidden; background: #f3f3f3; font-family: "Outfit", Arial, sans-serif; }
+button, select, input { font: inherit; }
+button { cursor: pointer; }
+button:focus-visible, select:focus-visible, tr:focus-visible { outline: 3px solid rgba(37, 99, 235, .35); outline-offset: 2px; }
+
+.application-shell { min-height: 100vh; background: #f3f3f3; }
+.dashboard-main { min-height: 100vh; margin-left: 150px; background: #f3f3f3; transition: margin-left .28s ease; }
+
+@media (max-width: 760px) {
+  .dashboard-main { margin-left: 0; }
+}
+
+/* ---- Loading / notices kept from the original build ---- */
+.dashboard-notice { margin: 14px 56px 0; border-radius: 12px; padding: 11px 15px; font-size: 12px; }
+.dashboard-notice.warning { background: #fff5e7; color: #8a5700; }
+.dashboard-notice.neutral { background: #eef3fa; color: #53647e; }
+.dashboard-loading { height: 3px; overflow: hidden; background: #e4e4e4; }
+.dashboard-loading span { display: block; height: 100%; width: 30%; background: var(--orange); animation: loading 1.1s infinite ease-in-out; }
+@keyframes loading { from { transform: translateX(-100%); } to { transform: translateX(430%); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+.spinning { animation: spin 1s linear infinite; }
+
+.dashboard-page-content { padding: 24px 56px 42px; }
+
+/* ---- Shared card / table primitives used by the secondary pages
+   (Agent Operations, Data Quality, Dataset & Model, Workflow & APIs,
+   Audit & Review) — restyled with the ESI Logis tokens: rounded-2xl,
+   shadow-2xl, bg-gray-100/white, font-outfit ---- */
+.dashboard-card { border: 0; background: #f3f4f6; border-radius: 16px; box-shadow: 0 12px 32px -8px rgba(15,15,15,.14); }
+
+.four-kpi-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; margin-bottom: 24px; }
+.two-chart-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+.two-chart-grid .chart-card { min-height: 390px; }
+
+.chart-card { min-height: 370px; padding: 24px; display: flex; flex-direction: column; }
+.card-heading { text-align: center; min-height: 40px; }
+.card-heading h2 { margin: 0; color: #757575; font-size: 18px; font-weight: 500; font-family: "Outfit", sans-serif; }
+.card-heading p { margin: 6px 0 0; color: #9a9a9a; font-size: 11px; }
+.chart-content { flex: 1; min-height: 260px; }
+
+.empty-panels { display: grid; grid-template-rows: 1fr 1fr; gap: 12px; }
+.empty-state { min-height: 178px; border: 1px dashed #cdd2d8; border-radius: 16px; background: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 25px; text-align: center; }
+.empty-state strong { font-size: 18px; }
+.empty-state span { margin-top: 8px; color: #7d838a; font-size: 12px; }
+
+.requests-card, .api-catalog { margin-top: 24px; overflow: hidden; }
+.table-title-row { min-height: 75px; padding: 20px 27px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #e1e1e1; }
+.table-title-row h2 { margin: 0; font-size: 18px; font-family: "Outfit", sans-serif; }
+.table-title-row p { margin: 5px 0 0; color: #7b7b7b; font-size: 11px; }
+.table-title-row > span { color: #60708a; font-size: 12px; }
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: #fff; }
+th { padding: 14px 17px; color: #667085; background: #f5f6f7; text-align: left; font-size: 11px; font-weight: 600; white-space: nowrap; }
+td { padding: 15px 17px; border-top: 1px solid #ececec; color: #353a41; font-size: 12px; white-space: nowrap; }
+tbody tr { transition: background .15s ease; }
+tbody tr:hover { background: #fff9ef; }
+.mono-cell { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; }
+
+.status-badge { display: inline-flex; border-radius: 999px; padding: 5px 9px; font-size: 10px; font-weight: 600; background: #edf0f4; color: #596273; }
+.status-badge.completed, .status-badge.healthy { background: #eaf8f0; color: #249c62; }
+.status-badge.manual-review, .status-badge.escalated, .status-badge.degraded { background: #fff3df; color: #ad6800; }
+.status-badge.failed, .status-badge.rejected, .status-badge.rejected-failed { background: #fdebec; color: #cb3444; }
+.status-badge.in-progress { background: #eaf1ff; color: #2563eb; }
+
+.workflow-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; }
+.workflow-card { position: relative; min-height: 260px; padding: 28px; background: #fff; }
+.workflow-number { position: absolute; top: 20px; right: 22px; color: #e5e5e5; font: 600 34px "Oxanium", sans-serif; }
+.workflow-card h2 { margin: 20px 0 12px; font-size: 17px; font-family: "Outfit", sans-serif; }
+.workflow-card dl { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 22px 0 0; }
+.workflow-card dl div { display: flex; flex-direction: column; gap: 3px; }
+.workflow-card dt { color: #8a8f95; font-size: 10px; }
+.workflow-card dd { margin: 0; font-size: 13px; font-weight: 600; }
+.api-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; padding: 25px; background: #fff; }
+.api-grid > div { border: 1px solid #e6e7e9; border-radius: 12px; padding: 16px; display: flex; justify-content: space-between; align-items: center; }
+.api-grid code { color: #1f2937; font-size: 12px; }
+.primary-button { border: 0; border-radius: 9px; padding: 10px 16px; background: #050505; color: #fff; }
+.primary-button:hover { background: #ea8b00; }
+
+.dashboard-footer { min-height: 44px; padding: 0 56px; display: flex; justify-content: space-between; align-items: center; color: #91a0b8; background: #f9f9f9; border-top: 1px solid #e5e5e5; font-size: 10px; }
+
+.section-title { margin: 0 0 12px; font-family: "Outfit", sans-serif; font-size: 14px; font-weight: 600; color: #353a41; text-transform: uppercase; letter-spacing: .04em; }
+
+.menu-item { display: block; width: 100%; text-align: left; padding: 8px 10px; border-radius: 8px; font-size: 12px; color: #353a41; background: transparent; border: 0; }
+.menu-item:hover { background: #f5f6f7; }
+
+.drawer-backdrop { position: fixed; inset: 0; z-index: 100; background: rgba(4,5,6,.35); display: flex; justify-content: flex-end; }
+.decision-drawer { width: min(440px, 92vw); height: 100%; overflow-y: auto; background: #fff; padding: 32px; box-shadow: -20px 0 40px rgba(0,0,0,.18); }
+.drawer-close { float: right; border: 0; background: transparent; }
+.decision-drawer > p { color: var(--orange); text-transform: uppercase; letter-spacing: .12em; font-size: 10px; }
+.decision-drawer h2 { font-family: "Oxanium", sans-serif; }
+.decision-drawer dl div { padding: 12px 0; border-bottom: 1px solid #eee; }
+.decision-drawer dt { color: #888; font-size: 10px; text-transform: capitalize; }
+.decision-drawer dd { margin: 5px 0 0; font-size: 13px; }
+
+@media (max-width: 1250px) {
+  .dashboard-page-content { padding-left: 32px; padding-right: 32px; }
+}
+
+@media (max-width: 1000px) {
+  .four-kpi-grid { grid-template-columns: 1fr 1fr; }
+  .workflow-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 760px) {
+  .dashboard-page-content { padding: 20px 15px 35px; }
+  .two-chart-grid { grid-template-columns: 1fr; }
+  .four-kpi-grid, .workflow-grid, .api-grid { grid-template-columns: 1fr; }
+  .dashboard-footer { padding: 13px 16px; flex-direction: column; gap: 4px; align-items: flex-start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+}

@@ -1,0 +1,19 @@
+{
+  "action_supported": "yes",
+  "pdv_supported": "yes",
+  "phone_supported": "unclear",
+  "stored_state_compatible": "yes",
+  "contradiction_present": false,
+  "contradiction_type": null,
+  "missing_fields": [
+    "phone"
+  ],
+  "correction_detected": false,
+  "new_request_detected": true,
+  "evidence_summary": [
+    "La demande de changement du numéro OTP est explicite.",
+    "Le PDV 22000001 est explicite.",
+    "Aucun nouveau téléphone n'est fourni."
+  ],
+  "raw_confidence": 0.99
+}

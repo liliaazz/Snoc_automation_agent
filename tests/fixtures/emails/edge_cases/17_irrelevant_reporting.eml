@@ -1,0 +1,17 @@
+From: Analyste Reporting <reporting@example.invalid>
+To: Agent SNOC <snoc-agent@example.invalid>
+Date: Fri, 10 Jul 2026 10:00:00 +0100
+Message-ID: <edge-irrelevant-reporting-017@fixtures.snoc.invalid>
+Subject: Ecart de stock SIM dans le reporting
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Bonjour,
+
+Le stock SIM du PDV 95000001 ne remonte pas dans le tableau de bord.
+La dernière vente concernait le client de test 0770000060.
+Il ne s'agit ni d'un déblocage, ni d'un accès VPN, ni d'un changement OTP.
+
+Cordialement,
+Équipe Reporting

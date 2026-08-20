@@ -1,0 +1,42 @@
+{
+  "message_kind": "clarification_reply",
+  "referenced_existing_operation_ids": [
+    "00000000-0000-0000-0000-0000000000c3"
+  ],
+  "operations": [
+    {
+      "local_operation_id": "c-vpn-3",
+      "action": "vpn_access",
+      "pdv_code": "32000003",
+      "phone": "0770000003",
+      "additional_fields": {},
+      "missing_fields": [],
+      "evidence": [
+        {
+          "field_name": "pdv_code",
+          "value": "32000003",
+          "source": "stored_request_state",
+          "evidence_text": "PDV de l'opération VPN ciblée",
+          "support": "supported"
+        },
+        {
+          "field_name": "phone",
+          "value": "0770000003",
+          "source": "latest_user_message",
+          "evidence_text": "utilisez uniquement le 0770000003",
+          "support": "supported"
+        }
+      ],
+      "ambiguity_reasons": [],
+      "raw_action_confidence": 0.99,
+      "raw_field_confidence": {
+        "pdv_code": 0.99,
+        "phone": 0.99
+      }
+    }
+  ],
+  "new_request_present": false,
+  "contradiction_with_stored_state": false,
+  "contradiction_details": [],
+  "unresolved_ambiguities": []
+}

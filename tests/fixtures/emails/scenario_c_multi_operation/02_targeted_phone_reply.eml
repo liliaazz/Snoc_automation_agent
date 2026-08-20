@@ -1,0 +1,15 @@
+From: Animateur Zone Gamma <animateur.gamma@example.invalid>
+To: Agent SNOC <snoc-agent@example.invalid>
+Date: Fri, 03 Jul 2026 10:30:00 +0100
+Message-ID: <c-targeted-phone-002@fixtures.snoc.invalid>
+In-Reply-To: <clarification-c-001@snoc-agent.invalid>
+References: <c-three-operations-001@fixtures.snoc.invalid> <clarification-c-001@snoc-agent.invalid>
+Subject: Re: [SNOC-REQ-C00000000001] Telephone pour operation VPN
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Pour l'opération VPN du PDV 32000003, utilisez uniquement le 0770000003.
+Les deux autres demandes ne changent pas.
+
+Bien cordialement

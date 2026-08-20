@@ -1,0 +1,23 @@
+From: Animateur Zone Gamma <animateur.gamma@example.invalid>
+To: Agent SNOC <snoc-agent@example.invalid>
+Date: Fri, 03 Jul 2026 10:00:00 +0100
+Message-ID: <c-three-operations-001@fixtures.snoc.invalid>
+Subject: Trois operations S-NOC a traiter
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Bonjour,
+
+Merci de traiter séparément les trois demandes suivantes :
+
+1. Débloquer le compte du PDV 32000001.
+2. Réinitialiser le mot de passe du PDV 32000002.
+3. Créer l'accès VPN du PDV 32000003.
+
+Pour le troisième point, deux numéros ont été communiqués : 0770000002 et
+0770000003. Je ne peux pas confirmer lequel doit recevoir le token. Merci de
+demander uniquement cette précision.
+
+Cordialement,
+Équipe Gamma

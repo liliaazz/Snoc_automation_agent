@@ -1,0 +1,15 @@
+From: Superviseur Zone Theta <superviseur.theta@example.invalid>
+To: Agent SNOC <snoc-agent@example.invalid>
+Date: Wed, 08 Jul 2026 08:03:00 +0100
+Message-ID: <h-correction-before-002@fixtures.snoc.invalid>
+In-Reply-To: <h-original-otp-001@fixtures.snoc.invalid>
+References: <h-original-otp-001@fixtures.snoc.invalid>
+Subject: Re: Changement numero OTP PDV 82000001
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Correction avant traitement : le bon nouveau numéro est 0770000041,
+et non 0770000040.
+
+Merci de prendre la dernière valeur.

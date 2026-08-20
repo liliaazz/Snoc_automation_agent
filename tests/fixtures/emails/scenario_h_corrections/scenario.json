@@ -1,0 +1,12 @@
+{
+  "scenarios": {
+    "before-execution": [
+      {"file": "01_original_pending_otp.eml", "alias": "pending", "defer_execution": true},
+      {"file": "02_correction_before_execution.eml", "alias": "corrected"}
+    ],
+    "after-execution": [
+      {"file": "01_original_pending_otp.eml", "alias": "executed"},
+      {"file": "03_correction_after_execution.eml", "alias": "late_correction"}
+    ]
+  }
+}

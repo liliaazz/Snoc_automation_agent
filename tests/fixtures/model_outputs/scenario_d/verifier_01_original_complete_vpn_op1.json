@@ -1,0 +1,16 @@
+{
+  "action_supported": "yes",
+  "pdv_supported": "yes",
+  "phone_supported": "yes",
+  "stored_state_compatible": "yes",
+  "contradiction_present": false,
+  "contradiction_type": null,
+  "missing_fields": [],
+  "correction_detected": false,
+  "new_request_detected": true,
+  "evidence_summary": [
+    "La création d'accès VPN est explicite.",
+    "Le PDV 42000001 et le téléphone 0770000010 sont dans le message courant."
+  ],
+  "raw_confidence": 0.99
+}

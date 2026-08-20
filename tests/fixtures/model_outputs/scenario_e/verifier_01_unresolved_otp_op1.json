@@ -1,0 +1,18 @@
+{
+  "action_supported": "yes",
+  "pdv_supported": "yes",
+  "phone_supported": "unclear",
+  "stored_state_compatible": "yes",
+  "contradiction_present": false,
+  "contradiction_type": null,
+  "missing_fields": [
+    "phone"
+  ],
+  "correction_detected": false,
+  "new_request_detected": true,
+  "evidence_summary": [
+    "Le changement OTP du PDV 52000001 est explicite.",
+    "Le nouveau téléphone est absent."
+  ],
+  "raw_confidence": 0.99
+}

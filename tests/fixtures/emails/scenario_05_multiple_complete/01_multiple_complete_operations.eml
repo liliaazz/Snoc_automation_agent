@@ -1,0 +1,20 @@
+From: Superviseur Zone Mu <superviseur.mu@example.invalid>
+To: Agent SNOC <snoc-agent@example.invalid>
+Date: Sat, 11 Jul 2026 08:00:00 +0100
+Message-ID: <multi-complete-005@fixtures.snoc.invalid>
+Subject: Plusieurs operations completes a traiter
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Bonjour,
+
+Merci de traiter les opérations indépendantes suivantes :
+
+- débloquer le compte du PDV 32500001 ;
+- réinitialiser le mot de passe du PDV 32500002 ;
+- changer le numéro OTP du PDV 32500003 vers 0770000004.
+
+Toutes les informations sont confirmées.
+
+Cordialement

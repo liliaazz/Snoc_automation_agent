@@ -1,0 +1,14 @@
+/* Scoped styles for content added during the second-pass merge.
+   Every selector is namespaced with .snoc-content- so nothing here can
+   collide with or override the approved index.css design tokens. */
+
+.snoc-content-heatmap-cell {
+  transition: transform 0.15s ease;
+}
+.snoc-content-heatmap-cell:hover {
+  transform: scale(1.15);
+}
+
+.snoc-content-meta-grid dt {
+  letter-spacing: 0.04em;
+}

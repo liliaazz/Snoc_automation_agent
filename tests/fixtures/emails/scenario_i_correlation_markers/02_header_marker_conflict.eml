@@ -1,0 +1,15 @@
+From: Animateur Zone Iota <animateur.iota@example.invalid>
+To: Agent SNOC <snoc-agent@example.invalid>
+Date: Thu, 09 Jul 2026 08:30:00 +0100
+Message-ID: <i-header-marker-conflict-002@fixtures.snoc.invalid>
+In-Reply-To: {{header_request.clarification_message_id}}
+References: {{header_request.inbound_message_id}} {{header_request.clarification_message_id}}
+Subject: Re: [{{marker_request.request_reference}}] Information manquante
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Le numéro est 0770000051 pour la référence {{marker_request.request_reference}}.
+Les en-têtes de ce message proviennent pourtant d'une autre demande.
+
+Merci.

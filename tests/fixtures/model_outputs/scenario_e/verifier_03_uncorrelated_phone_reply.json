@@ -1,0 +1,20 @@
+{
+  "action_supported": "unclear",
+  "pdv_supported": "unclear",
+  "phone_supported": "unclear",
+  "stored_state_compatible": "unclear",
+  "contradiction_present": false,
+  "contradiction_type": "uncorrelated_reply_multiple_open_operations",
+  "missing_fields": [
+    "target_operation",
+    "pdv_code"
+  ],
+  "correction_detected": false,
+  "new_request_detected": false,
+  "evidence_summary": [
+    "Le téléphone 0770000020 est visible mais son opération cible est indéterminée.",
+    "Deux opérations ouvertes attendent chacune un téléphone.",
+    "Aucun signal de corrélation fort ne permet une exécution automatique."
+  ],
+  "raw_confidence": 0.99
+}

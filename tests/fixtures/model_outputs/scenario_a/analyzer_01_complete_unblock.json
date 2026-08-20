@@ -1,0 +1,32 @@
+{
+  "message_kind": "new_request",
+  "referenced_existing_operation_ids": [],
+  "operations": [
+    {
+      "local_operation_id": "a-unblock-1",
+      "action": "account_unblock",
+      "pdv_code": "12000001",
+      "phone": null,
+      "additional_fields": {},
+      "missing_fields": [],
+      "evidence": [
+        {
+          "field_name": "pdv_code",
+          "value": "12000001",
+          "source": "latest_user_message",
+          "evidence_text": "compte S-NOC du point de vente 12000001",
+          "support": "supported"
+        }
+      ],
+      "ambiguity_reasons": [],
+      "raw_action_confidence": 0.99,
+      "raw_field_confidence": {
+        "pdv_code": 0.99
+      }
+    }
+  ],
+  "new_request_present": true,
+  "contradiction_with_stored_state": false,
+  "contradiction_details": [],
+  "unresolved_ambiguities": []
+}

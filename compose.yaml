@@ -1,0 +1,113 @@
+name: "${SNOC_COMPOSE_PROJECT_NAME:-snoc-langgraph}"
+
+x-runtime: &runtime
+  image: snoc-langgraph-agent:merged
+  build:
+    context: .
+    dockerfile: Dockerfile
+  env_file:
+    - "${SNOC_ENV_FILE:-.env}"
+  environment:
+    APP_ENVIRONMENT: "${APP_ENVIRONMENT:-production}"
+    WORKFLOW_ENGINE: langgraph
+    RAW_EML_DIRECTORY: /app/var/raw_eml
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    env_file:
+      - "${SNOC_ENV_FILE:-.env}"
+    volumes:
+      - snoc_langgraph_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  migrate:
+    <<: *runtime
+    command: ["alembic", "upgrade", "head"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: "no"
+
+  worker:
+    <<: *runtime
+    command: ["snoc-agent", "worker", "run"]
+    volumes:
+      - snoc_langgraph_runtime_data:/app/var
+    restart: unless-stopped
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+
+  api:
+    <<: *runtime
+    command: ["snoc-api", "--host", "0.0.0.0", "--port", "8000"]
+    restart: unless-stopped
+    ports:
+      - "${SNOC_API_BIND_ADDRESS:-0.0.0.0}:${SNOC_API_PORT:-8000}:8000"
+    volumes:
+      - snoc_langgraph_runtime_data:/app/var
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import httpx; r=httpx.get('http://localhost:8000/health/live'); r.raise_for_status()",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: frontend-builder
+    profiles: ["build"]
+
+  dashboard:
+    <<: *runtime
+    profiles: ["diagnostics"]
+    command:
+      - streamlit
+      - run
+      - dashboard.py
+      - --server.address=0.0.0.0
+      - --server.port=8502
+      - --server.headless=true
+    ports:
+      - "127.0.0.1:${SNOC_DASHBOARD_PORT:-8502}:8502"
+    volumes:
+      - ./outputs:/app/outputs:ro
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+
+  journey:
+    <<: *runtime
+    profiles: ["test"]
+    command: ["python", "scripts/docker_mail_journey.py", "--confirm-send"]
+    volumes:
+      - ./outputs:/app/outputs
+    depends_on:
+      worker:
+        condition: service_started
+
+volumes:
+  snoc_langgraph_postgres_data:
+    name: "${SNOC_POSTGRES_VOLUME:-snoc_langgraph_postgres_data}"
+  snoc_langgraph_runtime_data:
+    name: "${SNOC_RUNTIME_VOLUME:-snoc_langgraph_runtime_data}"

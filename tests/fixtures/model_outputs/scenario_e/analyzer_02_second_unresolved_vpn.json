@@ -1,0 +1,44 @@
+{
+  "message_kind": "mixed",
+  "referenced_existing_operation_ids": [
+    "00000000-0000-0000-0000-0000000000e1"
+  ],
+  "operations": [
+    {
+      "local_operation_id": "e-vpn-2",
+      "action": "vpn_access",
+      "pdv_code": "52000002",
+      "phone": null,
+      "additional_fields": {},
+      "missing_fields": [
+        "phone"
+      ],
+      "evidence": [
+        {
+          "field_name": "pdv_code",
+          "value": "52000002",
+          "source": "latest_user_message",
+          "evidence_text": "créer un accès VPN pour le PDV 52000002",
+          "support": "supported"
+        },
+        {
+          "field_name": "phone",
+          "value": null,
+          "source": "unknown",
+          "evidence_text": "Le téléphone de contact sera également envoyé plus tard.",
+          "support": "unclear"
+        }
+      ],
+      "ambiguity_reasons": [],
+      "raw_action_confidence": 0.99,
+      "raw_field_confidence": {
+        "pdv_code": 0.99,
+        "phone": null
+      }
+    }
+  ],
+  "new_request_present": true,
+  "contradiction_with_stored_state": false,
+  "contradiction_details": [],
+  "unresolved_ambiguities": []
+}

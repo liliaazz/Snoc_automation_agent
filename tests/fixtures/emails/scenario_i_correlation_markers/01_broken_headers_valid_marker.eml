@@ -1,0 +1,14 @@
+From: Animateur Zone Iota <animateur.iota@example.invalid>
+To: Agent SNOC <snoc-agent@example.invalid>
+Date: Thu, 09 Jul 2026 08:00:00 +0100
+Message-ID: <i-broken-header-001@fixtures.snoc.invalid>
+In-Reply-To: ceci n'est pas un identifiant RFC valide
+Subject: Re: [{{marker_request.request_reference}}] Telephone demande
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Référence {{marker_request.request_reference}}.
+Le nouveau numéro demandé est 0770000050.
+
+Cordialement

@@ -1,0 +1,16 @@
+From: Superviseur Zone Beta <superviseur.beta@example.invalid>
+To: Agent SNOC <snoc-agent@example.invalid>
+Date: Thu, 02 Jul 2026 09:00:00 +0100
+Message-ID: <b-incomplete-otp-001@fixtures.snoc.invalid>
+Subject: Changement numero OTP PDV 22000001
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Bonjour,
+
+Merci de changer le numéro qui reçoit les SMS OTP pour le PDV 22000001.
+Je n'ai pas encore indiqué le nouveau numéro.
+
+Bien cordialement,
+Supervision Beta

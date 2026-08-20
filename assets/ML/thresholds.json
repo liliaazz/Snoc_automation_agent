@@ -1,0 +1,10 @@
+{
+    "locked": 0.6246,
+    "reset": 0.1183,
+    "vpn": 0.4405,
+    "otp": 0.6106,
+    "irrelevant": 0.5359,
+
+    "svm_confidence_threshold": 0.75,
+    "gemma_confidence_threshold": 0.80
+}

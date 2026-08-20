@@ -1,0 +1,44 @@
+{
+  "message_kind": "clarification_reply",
+  "referenced_existing_operation_ids": [
+    "00000000-0000-0000-0000-0000000000b1"
+  ],
+  "operations": [
+    {
+      "local_operation_id": "b-otp-1",
+      "action": "otp_number_change",
+      "pdv_code": "22000001",
+      "phone": null,
+      "additional_fields": {},
+      "missing_fields": [
+        "phone"
+      ],
+      "evidence": [
+        {
+          "field_name": "pdv_code",
+          "value": "22000001",
+          "source": "stored_request_state",
+          "evidence_text": "PDV conservé dans l'opération non résolue",
+          "support": "supported"
+        },
+        {
+          "field_name": "phone",
+          "value": null,
+          "source": "latest_user_message",
+          "evidence_text": "Je vous transmettrai le numéro dès que je l'aurai.",
+          "support": "unclear"
+        }
+      ],
+      "ambiguity_reasons": [],
+      "raw_action_confidence": 0.97,
+      "raw_field_confidence": {
+        "pdv_code": 0.99,
+        "phone": null
+      }
+    }
+  ],
+  "new_request_present": false,
+  "contradiction_with_stored_state": false,
+  "contradiction_details": [],
+  "unresolved_ambiguities": []
+}

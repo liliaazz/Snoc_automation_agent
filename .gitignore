@@ -1,0 +1,122 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+service-account*.json
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+.eggs/
+
+# Python builds
+build/
+dist/
+
+# Node.js
+node_modules/
+frontend/node_modules/
+.npm/
+.yarn/
+.pnpm-store/
+
+# Frontend generated output
+.next/
+.vite/
+coverage/
+frontend/dist/
+frontend/build/
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.swp
+*.swo
+*~
+
+# Databases and backups
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+*.bak
+backups/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated application data
+uploads/
+outputs/
+generated/
+artifacts/
+assets/ML/*.pkl
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node.js
+node_modules/
+frontend/node_modules/
+
+# Generated frontend files
+frontend/dist/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Generated outputs
+outputs/
+logs/
+tmp/
+
+# Machine-learning models
+assets/ML/*.pkl
+
+# Backup files
+*.conflict-backup
+
+# Runtime data, raw emails, and local processing artifacts
+var/

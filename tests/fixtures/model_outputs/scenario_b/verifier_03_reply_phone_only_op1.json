@@ -1,0 +1,17 @@
+{
+  "action_supported": "yes",
+  "pdv_supported": "yes",
+  "phone_supported": "yes",
+  "stored_state_compatible": "yes",
+  "contradiction_present": false,
+  "contradiction_type": null,
+  "missing_fields": [],
+  "correction_detected": false,
+  "new_request_detected": false,
+  "evidence_summary": [
+    "La réponse est fortement corrélée à la clarification OTP.",
+    "Le PDV 22000001 provient de l'état non résolu.",
+    "Le nouveau téléphone 0770000001 est explicite dans le message courant."
+  ],
+  "raw_confidence": 0.99
+}

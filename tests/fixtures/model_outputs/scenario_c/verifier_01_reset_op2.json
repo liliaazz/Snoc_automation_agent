@@ -1,0 +1,15 @@
+{
+  "action_supported": "yes",
+  "pdv_supported": "yes",
+  "phone_supported": "not_required",
+  "stored_state_compatible": "yes",
+  "contradiction_present": false,
+  "contradiction_type": null,
+  "missing_fields": [],
+  "correction_detected": false,
+  "new_request_detected": true,
+  "evidence_summary": [
+    "La réinitialisation du mot de passe et le PDV 32000002 sont explicitement associés."
+  ],
+  "raw_confidence": 0.99
+}

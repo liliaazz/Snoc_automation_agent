@@ -1,0 +1,19 @@
+{
+  "action_supported": "yes",
+  "pdv_supported": "yes",
+  "phone_supported": "unclear",
+  "stored_state_compatible": "yes",
+  "contradiction_present": false,
+  "contradiction_type": null,
+  "missing_fields": [
+    "phone"
+  ],
+  "correction_detected": false,
+  "new_request_detected": false,
+  "evidence_summary": [
+    "La réponse est corrélée à l'opération OTP non résolue.",
+    "Le PDV provient de l'état stocké valide.",
+    "La réponse ne fournit toujours aucun téléphone."
+  ],
+  "raw_confidence": 0.99
+}

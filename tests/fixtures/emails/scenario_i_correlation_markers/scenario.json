@@ -1,0 +1,9 @@
+{
+  "name": "scenario_i_correlation_markers",
+  "steps": [
+    {"file": "00_header_request.eml", "alias": "header_request"},
+    {"file": "00_marker_request.eml", "alias": "marker_request"},
+    {"file": "01_broken_headers_valid_marker.eml", "alias": "marker_reply"},
+    {"file": "02_header_marker_conflict.eml", "alias": "conflict"}
+  ]
+}
